@@ -31,7 +31,16 @@ public class Camera {
     }
 
     public Ray3 getRay(){
+        // this ignores direction and assumes <0, 0, 1>
+        // generates a vector that guarantees the components stay in proportion
+        // this is more accurate to the projective model and has no commutative order errors
+
+        Vec3 dir = Vec3.normalize(new Vec3(Math.tan(this.targetYaw()), Math.tan(this.targetPitch()), 1));
+
+        return new Ray3(this.position, dir);
+
+        // old method that uses rotations
         // euler order is potentially not negligible, hopefully having parallel camera directions accounts for this
-        return new Ray3(this.position, Vec3.rotateY(Vec3.rotateX(this.direction, this.targetPitch()), this.targetYaw()));
+        // return new Ray3(this.position, Vec3.rotateY(Vec3.rotateX(this.direction, this.targetPitch()), this.targetYaw()));
     }
 }

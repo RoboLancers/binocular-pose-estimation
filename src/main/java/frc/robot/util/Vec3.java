@@ -17,6 +17,12 @@ public class Vec3 {
         SmartDashboard.putNumber(name + "X", this.x);
         SmartDashboard.putNumber(name + "Y", this.y);
         SmartDashboard.putNumber(name + "Z", this.z);
+
+        double readableX = Math.round(this.x * 10) / 10;
+        double readableY = Math.round(this.y * 10) / 10;
+        double readableZ = Math.round(this.z * 10) / 10;
+
+        SmartDashboard.putString(name, "< " + readableX + " , " + readableY + " , " + readableZ + " >");
     }
 
     public static Vec3 add(Vec3 v1, Vec3 v2){

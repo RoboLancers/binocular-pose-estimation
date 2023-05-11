@@ -4,18 +4,38 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-
+    {
+      "type": "java",
+      "name": "VisionTest",
+      "request": "launch",
+      "mainClass": "frc.robot.subsystems.vision.VisionTest",
+      "projectName": "binocular-pose-estimation"
+    },
+    {
+      "type": "java",
+      "name": "RobotContainer",
+      "request": "launch",
+      "mainClass": "frc.robot.RobotContainer",
+      "projectName": "binocular-pose-estimation"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "frc.robot.Main",
+      "projectName": "binocular-pose-estimation"
+    },
     {
       "type": "wpilib",
       "name": "WPILib Desktop Debug",
       "request": "launch",
-      "desktop": true,
+      "desktop": true
     },
     {
       "type": "wpilib",
       "name": "WPILib roboRIO Debug",
       "request": "launch",
-      "desktop": false,
+      "desktop": false
     }
   ]
 }

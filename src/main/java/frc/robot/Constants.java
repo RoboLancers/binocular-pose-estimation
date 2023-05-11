@@ -20,12 +20,12 @@ public final class Constants {
     }
 
     public static final class Vision {
-        public static final Vec3 camPos1 = new Vec3(-2, 0, 0);
+        public static final Vec3 camPos1 = new Vec3(0, 0, 0);
         public static final Vec3 camDir1 = new Vec3(0, 0, 1);
-        public static final String camNt1 = "limelight1";
+        public static final String camNt1 = "limelight-one";
 
-        public static final Vec3 camPos2 = new Vec3(2, 0, 0);
+        public static final Vec3 camPos2 = new Vec3(0, 0, 0);
         public static final Vec3 camDir2 = new Vec3(0, 0, 1);
-        public static final String camNt2 = "limelight2";
+        public static final String camNt2 = "limelight-two";
     }
 }
