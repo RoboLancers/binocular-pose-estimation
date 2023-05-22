@@ -43,4 +43,8 @@ public class Camera {
         // euler order is potentially not negligible, hopefully having parallel camera directions accounts for this
         // return new Ray3(this.position, Vec3.rotateY(Vec3.rotateX(this.direction, this.targetPitch()), this.targetYaw()));
     }
+
+    public double[] getTag(String ntKey){
+        return this.limelight.getEntry(ntKey).getDoubleArray(new double[6]);
+    }
 }
